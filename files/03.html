@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es la Inteligencia Artificial (IA)?</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Elimina el scroll del navegador */
+            background-color: #0B132B;
+            height: 100%;
+        }
+        .slide-container {
+            width: 100%;
+            height: 100vh; /* Cambiado de min-height a height fijo */
+            overflow: hidden;
+            position: relative;
+            background-color: #0B132B;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Añade scroll interno */
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .circle-decoration {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+        .blue-circle {
+            background-color: #3A506B;
+        }
+        .teal-circle {
+            background-color: #5BC0BE;
+        }
+        .purple-circle {
+            background-color: #6C63FF;
+        }
+        .highlight {
+            color: #5BC0BE;
+            font-weight: 600;
+        }
+        .icon-box {
+            border-radius: 16px;
+            background-color: rgba(58, 80, 107, 0.4);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(91, 192, 190, 0.3);
+        }
+        .inspiration-card {
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(58, 80, 107, 0.6) 0%, rgba(41, 57, 77, 0.7) 100%);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(72, 187, 120, 0.3);
+            transition: all 0.3s ease;
+        }
+        .action-button {
+            background: linear-gradient(to right, #48BB78, #38A169);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .action-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 12px rgba(72, 187, 120, 0.3);
+        }
+        .icon-circle {
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(56, 161, 105, 0.2);
+            border: 2px solid rgba(56, 161, 105, 0.5);
+            transition: all 0.3s ease;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(58, 80, 107, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #48BB78;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a9e6d;
+        }
+        .header-fixed {
+            position: sticky;
+            top: 0;
+            background-color: #0B132B;
+            z-index: 20;
+            padding-bottom: 1rem;
+            padding-top: 1.5rem;
+        }
+        .content-padded {
+            padding-top: 1rem; /* Espacio para el header fijo */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Enhanced decorative circles with animation -->
+        <div class="circle-decoration blue-circle w-72 h-72 -top-20 -right-20 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration teal-circle w-56 h-56 bottom-20 left-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 0.5s"></div>
+        <div class="circle-decoration purple-circle w-40 h-40 top-40 -left-10 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration blue-circle w-80 h-80 -bottom-32 right-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 1s"></div>
+        
+        <div class="content-wrapper">
+            <!-- Enhanced Fixed Header -->
+            <div class="header-fixed z-10 animate-in" style="animation-delay: 0.1s">
+                <h1 class="title text-5xl lg:text-6xl mb-4">¿Qué es la Inteligencia Artificial (IA)?</h1>
+                <div class="w-32 h-1.5 bg-teal-400 rounded-full mb-4"></div>
+            </div>
+            
+            <!-- Main Content with internal scroll -->
+            <div class="flex flex-col lg:flex-row flex-grow py-6 z-10 relative content-padded">
+                <!-- Left Column -->
+                <div class="w-full lg:w-2/3 lg:pr-10 flex flex-col justify-center">
+                    <p class="content text-xl lg:text-2xl animate-in" style="animation-delay: 0.2s">
+                        La IA es la <span class="highlight">habilidad de las máquinas para imitar la inteligencia humana</span>: 
+                        aprender, razonar, reconocer patrones y tomar decisiones.
+                    </p>
+                    
+                    <p class="content text-lg lg:text-xl mt-6 lg:mt-8 animate-in" style="animation-delay: 0.3s">
+                        Funciona a través de <span class="highlight">algoritmos y modelos</span> que:
+                    </p>
+                    
+                    <ul class="content text-lg lg:text-xl mt-4 list-disc pl-6 space-y-3 animate-in" style="animation-delay: 0.4s">
+                        <li>Procesan enormes cantidades de datos</li>
+                        <li>Identifican patrones que los humanos no podrían ver</li>
+                        <li>Mejoran su rendimiento con el tiempo</li>
+                        <li>Se adaptan a nuevas situaciones</li>
+                    </ul>
+                    
+                    <div class="mt-8 lg:mt-10 flex space-x-4 animate-in" style="animation-delay: 0.5s">
+                        <span class="px-4 py-2 bg-purple-700 rounded-full text-white text-sm font-semibold">#SupercerebroDigital</span>
+                        <span class="px-4 py-2 bg-teal-700 rounded-full text-white text-sm font-semibold">#Algoritmos</span>
+                        <span class="px-4 py-2 bg-blue-700 rounded-full text-white text-sm font-semibold">#AprendizajeAutomático</span>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="w-full lg:w-1/3 flex flex-col items-center justify-center mt-8 lg:mt-0">
+                    <div class="grid grid-cols-1 gap-6 lg:gap-8">
+                        <div class="flex flex-col items-center animate-in" style="animation-delay: 0.3s">
+                            <div class="icon-circle mb-4">
+                                <i class="fas fa-robot text-4xl lg:text-5xl text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-3">Máquinas inteligentes</h3>
+                        </div>
+                        
+                        <div class="flex flex-col items-center animate-in" style="animation-delay: 0.4s">
+                            <div class="icon-circle mb-4">
+                                <i class="fas fa-database text-4xl lg:text-5xl text-purple-400"></i>
+                            </div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-3">Procesamiento de datos</h3>
+                        </div>
+                        
+                        <div class="flex flex-col items-center animate-in" style="animation-delay: 0.5s">
+                            <div class="icon-circle mb-4">
+                                <i class="fas fa-sitemap text-4xl lg:text-5xl text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-3">Reconoce patrones</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Bottom Bar -->
+        <div class="h-12 bg-gradient-to-r from-blue-900 to-green-800 z-10 relative flex items-center px-8 shrink-0">
+            <div class="flex-1">
+                <p class="text-sm text-blue-200 font-medium">Descubriendo el Poder de la IA</p>
+            </div>
+            <div>
+                <p class="text-sm text-blue-200 font-medium">Corporación Universitaria Comfacauca</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA en la Agricultura Moderna</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0B132B;
+            height: 100%;
+        }
+        .slide-container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background-color: #0B132B;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .circle-decoration {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+        .blue-circle {
+            background-color: #3A506B;
+        }
+        .teal-circle {
+            background-color: #5BC0BE;
+        }
+        .purple-circle {
+            background-color: #6C63FF;
+        }
+        .green-circle {
+            background-color: #48BB78;
+        }
+        .highlight {
+            color: #48BB78;
+            font-weight: 600;
+        }
+        .icon-box {
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(58, 80, 107, 0.6) 0%, rgba(41, 57, 77, 0.7) 100%);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(72, 187, 120, 0.3);
+            transition: all 0.3s ease;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+        .icon-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(72, 187, 120, 0.2);
+            border-color: rgba(72, 187, 120, 0.6);
+        }
+        .application-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(72, 187, 120, 0.2);
+        }
+        .application-item:last-child {
+            border-bottom: none;
+        }
+        .application-bullet {
+            min-width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #48BB78;
+            margin-right: 15px;
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(58, 80, 107, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #48BB78;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a9e6d;
+        }
+        .header-fixed {
+            position: sticky;
+            top: 0;
+            background-color: #0B132B;
+            z-index: 20;
+            padding-bottom: 1rem;
+            padding-top: 1.5rem;
+        }
+        .content-padded {
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Enhanced decorative circles with animation -->
+        <div class="circle-decoration blue-circle w-72 h-72 -top-20 -right-20 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration green-circle w-56 h-56 bottom-20 left-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 0.5s"></div>
+        <div class="circle-decoration purple-circle w-40 h-40 top-40 -left-10 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration teal-circle w-80 h-80 -bottom-32 right-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 1s"></div>
+        
+        <div class="content-wrapper">
+            <!-- Enhanced Fixed Header -->
+            <div class="header-fixed z-10 animate-in" style="animation-delay: 0.1s">
+                <h1 class="title text-5xl lg:text-6xl mb-4">IA en la Agricultura Moderna</h1>
+                <div class="w-32 h-1.5 bg-green-400 rounded-full mb-4"></div>
+            </div>
+            
+            <!-- Main Content with internal scroll -->
+            <div class="flex flex-col lg:flex-row flex-grow py-6 z-10 relative content-padded">
+                <!-- Left Content Column -->
+                <div class="w-full lg:w-1/2 lg:pr-10">
+                    <div class="bg-opacity-30 rounded-xl p-6 mb-6 animate-in" style="animation-delay: 0.2s">
+                        <div class="application-item">
+                            <div class="application-bullet"></div>
+                            <p class="content text-lg lg:text-xl">
+                                <span class="highlight">Agricultura de precisión:</span> Drones y sensores que analizan suelo y cultivos para optimizar recursos
+                            </p>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="application-bullet"></div>
+                            <p class="content text-lg lg:text-xl">
+                                <span class="highlight">Monitoreo inteligente:</span> Sistemas que detectan plagas, enfermedades y estrés hídrico en tiempo real
+                            </p>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="application-bullet"></div>
+                            <p class="content text-lg lg:text-xl">
+                                <span class="highlight">Predicción de cosechas:</span> Modelos predictivos que estiman rendimientos con alta precisión
+                            </p>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="application-bullet"></div>
+                            <p class="content text-lg lg:text-xl">
+                                <span class="highlight">Robótica agrícola:</span> Máquinas autónomas para siembra, cosecha y manejo de cultivos
+                            </p>
+                        </div>
+                        
+                        <div class="application-item">
+                            <div class="application-bullet"></div>
+                            <p class="content text-lg lg:text-xl">
+                                <span class="highlight">Optimización de recursos:</span> Uso eficiente de agua, fertilizantes y pesticidas mediante IA
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="animate-in" style="animation-delay: 0.3s">
+                        <span class="tag bg-green-700 text-white">#AgTech</span>
+                        <span class="tag bg-teal-700 text-white">#AgriculturaPrecisa</span>
+                        <span class="tag bg-blue-700 text-white">#FuturoAgrícola</span>
+                    </div>
+                </div>
+                
+                <!-- Right Visual Column -->
+                <div class="w-full lg:w-1/2 flex flex-col items-center mt-8 lg:mt-0">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                        <div class="icon-box animate-in" style="animation-delay: 0.4s">
+                            <i class="fas fa-drone-alt text-5xl text-green-400 mb-3"></i>
+                            <h3 class="title text-xl mb-2">Drones Agrícolas</h3>
+                            <p class="content text-center text-sm lg:text-base">Monitoreo aéreo de cultivos con visión computarizada</p>
+                        </div>
+                        
+                        <div class="icon-box animate-in" style="animation-delay: 0.5s">
+                            <i class="fas fa-seedling text-5xl text-green-400 mb-3"></i>
+                            <h3 class="title text-xl mb-2">Cultivos Inteligentes</h3>
+                            <p class="content text-center text-sm lg:text-base">Optimización del crecimiento mediante sensores y algoritmos</p>
+                        </div>
+                        
+                        <div class="icon-box animate-in" style="animation-delay: 0.6s">
+                            <i class="fas fa-tractor text-5xl text-blue-400 mb-3"></i>
+                            <h3 class="title text-xl mb-2">Maquinaria Autónoma</h3>
+                            <p class="content text-center text-sm lg:text-base">Equipos que operan con mínima intervención humana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Bottom Bar -->
+        <div class="h-12 bg-gradient-to-r from-blue-900 to-green-800 z-10 relative flex items-center px-8 shrink-0">
+            <div class="flex-1">
+                <p class="text-sm text-blue-200 font-medium">Revolucionando la Agricultura con IA</p>
+            </div>
+            <div>
+                <p class="text-sm text-blue-200 font-medium">Corporación Universitaria Comfacauca</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

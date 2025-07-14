@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA y Sostenibilidad: Construyendo un Futuro Verde</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Elimina el scroll del navegador */
+            background-color: #0B132B;
+            height: 100%;
+        }
+        .slide-container {
+            width: 100%;
+            height: 100vh; /* Cambiado de min-height a height fijo */
+            overflow: hidden;
+            position: relative;
+            background-color: #0B132B;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Añade scroll interno */
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .circle-decoration {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+        .blue-circle {
+            background-color: #3A506B;
+        }
+        .teal-circle {
+            background-color: #5BC0BE;
+        }
+        .green-circle {
+            background-color: #48BB78;
+        }
+        .earth-circle {
+            background-color: #38A169;
+        }
+        .highlight {
+            color: #48BB78;
+            font-weight: 600;
+        }
+        .inspiration-card {
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(58, 80, 107, 0.6) 0%, rgba(41, 57, 77, 0.7) 100%);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(72, 187, 120, 0.3);
+            transition: all 0.3s ease;
+        }
+        .inspiration-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(72, 187, 120, 0.2);
+            border-color: rgba(72, 187, 120, 0.6);
+        }
+        .action-button {
+            background: linear-gradient(to right, #48BB78, #38A169);
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .action-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 12px rgba(72, 187, 120, 0.3);
+        }
+        .icon-circle {
+            border-radius: 50%;
+            height: 90px;
+            width: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(56, 161, 105, 0.2);
+            border: 2px solid rgba(56, 161, 105, 0.5);
+            transition: all 0.3s ease;
+        }
+        .icon-circle:hover {
+            transform: scale(1.1);
+            background: rgba(56, 161, 105, 0.3);
+            box-shadow: 0 0 20px rgba(56, 161, 105, 0.3);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(58, 80, 107, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #48BB78;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a9e6d;
+        }
+        .header-fixed {
+            position: sticky;
+            top: 0;
+            background-color: #0B132B;
+            z-index: 20;
+            padding-bottom: 1rem;
+            padding-top: 1.5rem;
+        }
+        .content-padded {
+            padding-top: 1rem; /* Espacio para el header fijo */
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Enhanced decorative circles with animation -->
+        <div class="circle-decoration blue-circle w-72 h-72 -top-20 -right-20 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration green-circle w-56 h-56 bottom-20 left-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 0.5s"></div>
+        <div class="circle-decoration earth-circle w-40 h-40 top-40 -left-10 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration teal-circle w-80 h-80 -bottom-32 right-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 1s"></div>
+        
+        <div class="content-wrapper">
+            <!-- Enhanced Fixed Header -->
+            <div class="header-fixed z-10 animate-in" style="animation-delay: 0.1s">
+                <h1 class="title text-5xl lg:text-6xl mb-4">IA y Sostenibilidad: Construyendo un Futuro Verde</h1>
+                <div class="w-32 h-1.5 bg-green-400 rounded-full mb-4"></div>
+            </div>
+            
+            <!-- Main Content with internal scroll -->
+            <div class="flex flex-col lg:flex-row flex-grow py-6 z-10 relative content-padded">
+                <!-- Left Column -->
+                <div class="w-full lg:w-1/2 lg:pr-10 flex flex-col justify-center">
+                    <p class="content text-xl lg:text-2xl animate-in" style="animation-delay: 0.2s">
+                        La IA es una <span class="highlight">aliada clave</span> en la lucha contra el cambio climático y la construcción de un futuro sostenible.
+                    </p>
+                    
+                    <p class="content text-lg lg:text-xl mt-6 lg:mt-8 animate-in" style="animation-delay: 0.3s">
+                        Descubre cómo la tecnología inteligente está ayudando a <span class="highlight">proteger nuestro planeta</span> y optimizar el uso de recursos naturales.
+                    </p>
+                    
+                    <div class="mt-6 lg:mt-8 inspiration-card p-6 animate-in" style="animation-delay: 0.4s">
+                        <p class="text-xl lg:text-2xl font-semibold text-white mb-3">
+                            <i class="fas fa-quote-left text-green-400 mr-2"></i>
+                            No heredamos la tierra de nuestros antepasados, la tomamos prestada de nuestros hijos.
+                        </p>
+                        <p class="text-lg lg:text-xl text-blue-200">
+                            Usa la IA con <span class="text-green-300 font-semibold">responsabilidad</span>, <span class="text-teal-300 font-semibold">eficiencia</span> y <span class="text-blue-300 font-semibold">visión a largo plazo</span>.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 lg:mt-10 animate-in" style="animation-delay: 0.5s">
+                        <button class="action-button px-8 py-4 lg:px-10 lg:py-5 flex items-center text-white font-bold text-lg lg:text-xl">
+                            <i class="fas fa-leaf mr-3"></i>
+                            Únete al Movimiento Verde
+                        </button>
+                    </div>
+
+                    <!-- Additional content to demonstrate scroll -->
+                    <div class="mt-8 lg:mt-10 animate-in" style="animation-delay: 0.6s">
+                        <h3 class="text-xl lg:text-2xl font-bold text-green-400 mb-4">Casos de Éxito</h3>
+                        <ul class="content text-lg lg:text-xl list-disc pl-6 space-y-3">
+                            <li>Reducción del 20% en consumo energético en edificios inteligentes</li>
+                            <li>Optimización de rutas de transporte que disminuyen emisiones en un 15%</li>
+                            <li>Detección temprana de deforestación con un 90% de precisión</li>
+                            <li>Agricultura de precisión que reduce el uso de agua en un 30%</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 lg:mt-10 inspiration-card p-6 animate-in" style="animation-delay: 0.7s">
+                        <p class="text-xl lg:text-2xl font-semibold text-white mb-3">
+                            <i class="fas fa-lightbulb text-yellow-400 mr-2"></i>
+                            Innovación Sostenible
+                        </p>
+                        <p class="text-lg lg:text-xl text-blue-200">
+                            La IA puede analizar patrones climáticos complejos y predecir eventos extremos con mayor precisión, ayudando a comunidades a prepararse mejor para los efectos del cambio climático.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="w-full lg:w-1/2 flex flex-col items-center justify-center mt-8 lg:mt-0">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+                        <div class="flex flex-col items-center animate-in" style="animation-delay: 0.3s">
+                            <div class="icon-circle mb-4">
+                                <i class="fas fa-solar-panel text-4xl lg:text-5xl text-green-400"></i>
+                            </div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-3">Energía Limpia</h3>
+                            <p class="text-center text-blue-200 text-base lg:text-lg">Optimización de redes eléctricas con energías renovables</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center animate-in" style="animation-delay: 0.4s">
+                            <div class="icon-circle mb-4">
+                                <i class="fas fa-recycle text-4xl lg:text-5xl text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-3">Economía Circular</h3>
+                            <p class="text-center text-blue-200 text-base lg:text-lg">Sistemas inteligentes para reducir, reusar y reciclar</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center animate-in" style="animation-delay: 0.5s">
+                            <div class="icon-circle mb-4">
+                                <i class="fas fa-tree text-4xl lg:text-5xl text-green-400"></i>
+                            </div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-3">Agricultura Sostenible</h3>
+                            <p class="text-center text-blue-200 text-base lg:text-lg">Precisión en el uso de agua y recursos agrícolas</p>
+                        </div>
+                        
+                        <div class="flex flex-col items-center animate-in" style="animation-delay: 0.6s">
+                            <div class="icon-circle mb-4">
+                                <i class="fas fa-city text-4xl lg:text-5xl text-blue-400"></i>
+                            </div>
+                            <h3 class="text-lg lg:text-xl font-bold text-white mb-3">Ciudades Inteligentes</h3>
+                            <p class="text-center text-blue-200 text-base lg:text-lg">Infraestructuras urbanas eficientes y ecológicas</p>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-8 lg:mt-10 text-xl lg:text-2xl font-semibold text-center text-white animate-in" style="animation-delay: 0.7s">
+                        ¡El futuro es <span class="text-green-400">verde</span> y la IA está ayudando a construirlo!
+                    </p>
+
+                    <!-- Additional content to demonstrate scroll -->
+                    <div class="mt-8 lg:mt-10 w-full animate-in" style="animation-delay: 0.8s">
+                        <div class="inspiration-card p-6">
+                            <h3 class="text-xl lg:text-2xl font-bold text-green-400 mb-4">Tecnologías Clave</h3>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-microchip text-green-400 mr-3"></i>
+                                    <span class="text-white">IoT</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-chart-line text-blue-400 mr-3"></i>
+                                    <span class="text-white">Big Data</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-brain text-purple-400 mr-3"></i>
+                                    <span class="text-white">Machine Learning</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-cloud text-teal-400 mr-3"></i>
+                                    <span class="text-white">Cloud Computing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Bottom Bar -->
+        <div class="h-12 bg-gradient-to-r from-blue-900 to-green-800 z-10 relative flex items-center px-8 shrink-0">
+            <div class="flex-1">
+                <p class="text-sm text-blue-200 font-medium">Tecnología para un Planeta Sostenible</p>
+            </div>
+            <div>
+                <p class="text-sm text-blue-200 font-medium">Corporación Universitaria Comfacauca</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

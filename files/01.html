@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubriendo el Poder de la Inteligencia Artificial</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0B132B;
+            height: 100%;
+        }
+        .slide-container {
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background-color: #0B132B;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            width: 100%;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            line-height: 1.2;
+        }
+        .subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #5BC0BE;
+        }
+        .institution-info {
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+        }
+        .circle-decoration {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+        .animated-icon {
+            animation: float 3s infinite ease-in-out;
+            transition: all 0.3s ease;
+        }
+        .animated-icon:hover {
+            transform: scale(1.1) translateY(-10px);
+            filter: drop-shadow(0 0 8px rgba(91, 192, 190, 0.7));
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .blue-circle {
+            background-color: #3A506B;
+        }
+        .teal-circle {
+            background-color: #5BC0BE;
+        }
+        .purple-circle {
+            background-color: #6C63FF;
+        }
+        .tag {
+            transition: all 0.3s ease;
+        }
+        .tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        /* Estilos para la barra de desplazamiento */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(58, 80, 107, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5BC0BE;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4aa8a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Enhanced decorative circles with animation -->
+        <div class="circle-decoration blue-circle w-72 h-72 -top-20 -right-20 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration teal-circle w-56 h-56 bottom-20 left-60 opacity-25 hover:opacity-35 hover:scale-110" style="animation-delay: 0.5s"></div>
+        <div class="circle-decoration purple-circle w-40 h-40 top-40 -left-10 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration blue-circle w-80 h-80 -bottom-32 right-60 opacity-25 hover:opacity-35 hover:scale-110" style="animation-delay: 1s"></div>
+        
+        <div class="flex-grow flex flex-col justify-center items-center text-center z-10 relative py-16">
+            <div class="content-container">
+                <!-- Title Section with enhanced icons -->
+                <div class="mb-6 animate-in" style="animation-delay: 0.2s">
+                    <i class="fas fa-robot text-6xl text-blue-300 mb-4 animated-icon mx-4"></i>
+                    <i class="fas fa-brain text-6xl text-purple-400 mx-6 animated-icon mx-4"></i>
+                    <i class="fas fa-microchip text-6xl text-blue-400 animated-icon mx-4"></i>
+                </div>
+                
+                <h1 class="title text-6xl lg:text-7xl mb-8 px-4 lg:px-16 animate-in" style="animation-delay: 0.3s">
+                    Descubriendo el Poder de la<br><span class="text-blue-400">Inteligencia Artificial</span>
+                </h1>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-12 animate-in" style="animation-delay: 0.4s">
+                    <span class="tag px-6 py-3 bg-blue-700 rounded-full subtitle text-lg hover:bg-blue-600">Futuro</span>
+                    <span class="tag px-6 py-3 bg-purple-700 rounded-full subtitle text-lg hover:bg-purple-600">Innovación</span>
+                    <span class="tag px-6 py-3 bg-teal-700 rounded-full subtitle text-lg hover:bg-teal-600">Tecnología</span>
+                </div>
+                
+                <!-- Enhanced Institution Info -->
+                <div class="mt-auto institution-info animate-in" style="animation-delay: 0.5s">
+                    <p class="text-2xl font-semibold text-teal-300 mb-3">Presentado por: Ing. Julio Ricardo Martínez Montezuma</p>
+                    <p class="text-xl mb-2">Tecnologías Educativas de Unicomfacauca</p>
+                    <p class="text-xl mb-2">Corporación Universitaria Comfacauca</p>
+                    <p class="text-xl opacity-90">Popayán, Junio de 2025</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Digital Circuit Pattern -->
+        <div class="absolute bottom-0 left-0 right-0 h-24 flex items-end overflow-hidden z-0">
+            <svg width="100%" height="60" viewBox="0 0 1280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 50H400L420 35H620L640 50H800L820 30H980L1000 50H1280" stroke="#5BC0BE" stroke-width="3" stroke-linecap="round">
+                    <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="3s" repeatCount="indefinite" />
+                </path>
+                <path d="M0 55H300L320 40H520L540 55H850L870 35H1030L1050 55H1280" stroke="#6C63FF" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round">
+                    <animate attributeName="stroke-dashoffset" from="1000" to="0" dur="4s" repeatCount="indefinite" />
+                </path>
+                <circle cx="400" cy="50" r="5" fill="#5BC0BE">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="620" cy="35" r="5" fill="#5BC0BE">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="800" cy="50" r="5" fill="#5BC0BE">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="980" cy="30" r="5" fill="#5BC0BE">
+                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.7s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="300" cy="55" r="5" fill="#6C63FF" fill-opacity="0.7">
+                    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="520" cy="40" r="5" fill="#6C63FF" fill-opacity="0.7">
+                    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.5s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="850" cy="55" r="5" fill="#6C63FF" fill-opacity="0.7">
+                    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite" />
+                </circle>
+                <circle cx="1030" cy="35" r="5" fill="#6C63FF" fill-opacity="0.7">
+                    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.2s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

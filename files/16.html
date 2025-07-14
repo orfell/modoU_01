@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin de la Presentación</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #0B132B;
+            height: 100%;
+        }
+        .slide-container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            background-color: #0B132B;
+            display: flex;
+            flex-direction: column;
+        }
+        .content-wrapper {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        .circle-decoration {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 0;
+            transition: all 0.5s ease;
+        }
+        .blue-circle {
+            background-color: #3A506B;
+        }
+        .teal-circle {
+            background-color: #5BC0BE;
+        }
+        .purple-circle {
+            background-color: #6C63FF;
+        }
+        .highlight {
+            color: #5BC0BE;
+            font-weight: 600;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(58, 80, 107, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5BC0BE;
+            border-radius: 4px;
+        }
+        .header-fixed {
+            position: sticky;
+            top: 0;
+            background-color: #0B132B;
+            z-index: 20;
+            padding-bottom: 1rem;
+            padding-top: 1.5rem;
+        }
+        .content-padded {
+            padding-top: 1rem;
+        }
+        .hands-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .hands-circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(91, 192, 190, 0.1);
+            border: 2px solid rgba(91, 192, 190, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hands-icon {
+            font-size: 8rem;
+            color: #5BC0BE;
+            filter: drop-shadow(0 0 10px rgba(91, 192, 190, 0.5));
+            transform: rotate(-15deg);
+        }
+        .thank-you-message {
+            text-align: center;
+            margin-top: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <!-- Círculos decorativos animados -->
+        <div class="circle-decoration blue-circle w-72 h-72 -top-20 -right-20 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration teal-circle w-56 h-56 bottom-20 left-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 0.5s"></div>
+        <div class="circle-decoration purple-circle w-40 h-40 top-40 -left-10 opacity-30 hover:opacity-40 hover:scale-110"></div>
+        <div class="circle-decoration teal-circle w-80 h-80 -bottom-32 right-60 opacity-25 hover:opacity-35 hover:scale-110 floating" style="animation-delay: 1s"></div>
+        
+        <div class="content-wrapper">
+            <!-- Título fijo -->
+            <div class="header-fixed z-10 animate-in" style="animation-delay: 0.1s">
+                <h1 class="title text-5xl lg:text-6xl mb-4 text-center">Fin de la Presentación</h1>
+                <div class="w-32 h-1.5 bg-teal-400 rounded-full mb-4 mx-auto"></div>
+            </div>
+            
+            <!-- Contenido principal -->
+            <div class="flex flex-col flex-grow items-center justify-center py-6 z-10 relative content-padded">
+                <!-- Contenedor de manos animadas -->
+                <div class="hands-container animate-in" style="animation-delay: 0.3s">
+                    <div class="hands-circle floating" style="animation-delay: 0.8s">
+                        <i class="fas fa-handshake hands-icon"></i>
+                    </div>
+                </div>
+                
+                <!-- Mensaje de agradecimiento -->
+                <div class="thank-you-message">
+                    <p class="content text-2xl lg:text-3xl mb-4">Gracias por su tiempo y atención</p>
+                    <p class="content text-xl lg:text-2xl font-medium text-teal-300">Un abrazo y hasta la próxima</p>
+                </div>
+                
+                <!-- Efecto de partículas decorativas -->
+                <div class="mt-12 flex space-x-4 animate-in" style="animation-delay: 1s">
+                    <i class="fas fa-star text-yellow-400 text-xl opacity-70"></i>
+                    <i class="fas fa-heart text-red-400 text-xl opacity-70"></i>
+                    <i class="fas fa-lightbulb text-teal-400 text-xl opacity-70"></i>
+                    <i class="fas fa-star text-yellow-400 text-xl opacity-70"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Barra inferior -->
+        <div class="h-12 bg-gradient-to-r from-blue-900 to-teal-800 z-10 relative flex items-center px-8 shrink-0">
+            <div class="flex-1">
+                <p class="text-sm text-blue-200 font-medium">Inteligencia Artificial - Corporación Universitaria Comfacauca - Tecnologías Educativas de Unicomfacauca - TEdU</p>
+            </div>
+            <div>
+                <p class="text-sm text-blue-200 font-medium">© 2025</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
