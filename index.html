@@ -296,12 +296,12 @@
 
     <script>
         // Configuración de rutas
-        const basePath = "Files/";
+        const basePath = "files/";
         const totalSlides = 16;
 
-        // Generar nombres de archivo (01.htm, 02.htm, ..., 16.htm)
+        // Generar nombres de archivo (01.html, 02.html, ..., 16.html)
         const slides = Array.from({length: totalSlides}, (_, i) => {
-            return `${basePath}${(i + 1).toString().padStart(2, '0')}.htm`;
+            return `${basePath}${(i + 1).toString().padStart(2, '0')}.html`;
         });
 
         // Elementos del DOM
